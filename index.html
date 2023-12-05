@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body onload="mueveReloj()">
+	<header class="banner">
+		<nav>
+			<ul class="menu1">
+				<li class="item1">Inicio</li>
+				<li class="item1">Eventos</li>
+				<li class="item1">Noticias</li>
+				<li class="item1">Contactos</li>
+				<li class="item1">Login</li>
+				<li class="item1 buscador">
+					<input type="text" name="criterio">
+					<button>Buscar</button>
+					<button>Nuestra Marca</button>
+				</li>
+			</ul>
+		</nav>
+		<div class="titulos">
+			<h1 class="titulos1">Estilos SCJ</h1>
+			<h3 class="titulos1">Muebles de madera que dejan huella</h3>
+		</div>
+		<nav>
+			<ul class="menu2">
+				<li class="item2">PRODUCTOS</li>
+				<li class="item2">SERVICIOS</li>
+				<li class="item2">SOLUCIONES</li>
+				<li class="item2">PARTES</li>
+				<li class="item2">SOPORTE</li>
+				<li class="item2">NOSOTROS</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="container">
+		<div class="lateral">
+			<h3>PRODUCTOS DE MADERA</h3>
+			<p>Fabricamos muebles resistentes que duren y mejoren su aspecto con el tiempo.</p>
+			<p>Seleccione su Producto</p>
+			<div class="caja"><img src="img/escritorio-2-cajones.jpg"></div>
+			<div class="caja"><img src="img/mesa-acacia.jpg"></div>
+			<div class="caja"><img src="img/mesa-alas.jpg"></div>
+			<div class="caja"><img src="img/mesa-tinte-marron-claro.jpg"></div>
+		</div>
+		<div class="central">
+			<div class="subcont">
+				<div class="subcont1">
+					<img src="img/mueble-tv-tinte-blanco.jpg">
+				</div>
+				<div class="subcont1">
+					<h3>Muebles de madera</h3>
+					<h4>Muebles de madera que dejan huella</h4>
+					<p>En Estilos SCJ encontrarás muebles de madera, donde la calidez y belleza se unen para dar vida larga a tu hogar. Explora nuestra selección de muebles de madera, y realza cada rincón con un toque de encanto natural y duradero. </p>
+				</div>
+				<div class="subcont1">
+					<button id="botonClick">Click para Contar</button>
+					<button id="botonEstilo" onclick="cambiar()">Cambiar Estilo</button>
+					<div class="caja2" id="areaPantalla"> 0</div>
+					<div class="caja2" id="reloj"></div>
+				</div>
+			</div>
+			<div class="subcont">
+				<div class="relacionados">
+					<h4>Productos Relacionados</h4>
+					<ul>
+						<li>Mueble TV,180x42x74 cm</li>
+						<li>Mueble TV,160x42x45 cm</li>
+						<li>Mueble TV,162x40x63 cm</li>
+						<li>Mueble TV,180x42x74 cm</li>
+					</ul>
+				</div>
+				<div class="caracteristicas">
+					<h4>Caracteristicas</h4>
+					<ul>
+						<li>El banco para TV BESTÅ combina funcionalidad con un atractivo aspecto actual.</li>
+						<li>El almacenaje abierto permite ver mejor lo que hay, mientras que el almacenaje cerrado permite guardar y ordenar todas las cosas</li>
+						<li>La serie IDANÄS combina diseño atemporal con funcionalidades modernas.</li>
+						<li>El banco para TV BESTÅ combina funcionalidad con un atractivo aspecto actual. </li>
+					</ul>
+				</div>
+			</div>
+			<div class="subcont">
+				<table class="especificaciones">
+					<tr>
+						<th>Productos</th>
+						<th>Especificaciones de Productos</th>
+					</tr>
+					<tr>
+						<td>Estantería con puertas, pino,</td>
+						<td>89x30x124 cm, La combinación de almacenaje IVAR con puertas de bambú incluye multitud de estantes de madera abiertos y cerrados</td>
+					</tr>
+					<tr>
+						<td>Aparador, tinte blanco/marrón claro</td>
+						<td>157x88 cm, Guarda la vajilla, las fuentes de servir y expón tus objetos favoritos. Puedes usar un aparador de muchas formas.</td>
+					</tr>
+					<tr>
+						<td>Almacenaje de colgar, pino tte claro/gris oscuro</td>
+						<td>93x21x30 cm, Los adolescentes también necesitas soluciones de almacenaje amplias y de calidad para sus cosas</td>
+					</tr>
+					<tr>
+						<td>Mesa de centro, negro</td>
+						<td>65x140x52 cm, La mesa de centro ARKELSTORP tiene 2 alas abatibles que te permiten adaptar su tamaño fácilmente</td>
+					</tr>
+				</table>
+			</div>
+			<div class="subcont3">
+				<h3 class="titulosCajas">Productos y Accesorios Relacionados</h3>
+				<div class="caja3">
+					<img src="img/escritorio.jpg"><br>
+					<label>descripcion</label>
+				</div>
+				<div class="caja3">
+					<img src="img/mueble-tv-marron.jpg"><br>
+					<label>descripcion</label>
+				</div>
+				<div class="caja3">
+					<img src="img/vitrina-negro.jpg"><br>
+					<label>descripcion</label>
+				</div>
+				<div class="caja3">
+					<img src="img/vitrina-tinte-blanco.jpg"><br>
+					<label>descripcion</label>
+				</div>
+				<div class="caja3">
+					<img src="img/hemnes-comoda.jpg"><br>
+					<label>descripcion</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+        var boton = document.getElementById("botonClick");
+        var pantalla = document.getElementById("areaPantalla");
+        var contador = 0;
+        boton.onclick = function () {
+            contador++;
+            pantalla.textContent = contador;
+        }
+
+        function mueveReloj(){
+		    Ahora = new Date()
+		    hora = Ahora.getHours()
+		    minuto = Ahora.getMinutes()
+		    segundo = Ahora.getSeconds()
+		    horaReal = hora + " : " + minuto + " : " + segundo
+		    reloj.textContent = horaReal
+		    setTimeout("mueveReloj()",1000)
+		}
+		function cambiar(){
+			var caja2 = document.getElementById('reloj');
+			caja2.style.backgroundColor = '#FF00FF';
+			caja2.style.color = '#342539';
+		}
+    </script>
+</body>
+</html>
